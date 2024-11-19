@@ -9,7 +9,7 @@ export default function Index() {
         backgroundColor: "black",
       }}
     >
-      <Text style={{ fontSize: 24, color: "white" }}>Hello World!</Text>
+      <Text style={{ fontSize: 24, color: "white" }}>Hello World d!</Text>
     </View>
   );
 }
