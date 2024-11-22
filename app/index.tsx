@@ -1,8 +1,9 @@
 import { Redirect, router } from "expo-router";
-import { Image, ScrollView, StatusBar, Text, View } from "react-native";
+import { Image, ScrollView, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { images } from "../constants";
 import CustomButton from "@/components/CustomButton";
+import { StatusBar } from "expo-status-bar";
 
 export default function Index() {
   return (
@@ -50,7 +51,7 @@ export default function Index() {
       </ScrollView>
       <StatusBar
         backgroundColor="#161622" // For Android
-        barStyle="light-content" // For iOS and Android
+        style="light" // For iOS and Android
         translucent={false} // Makes the StatusBar opaque
       />
     </SafeAreaView>
