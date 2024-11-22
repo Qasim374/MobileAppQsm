@@ -3,17 +3,18 @@ import React from "react";
 import { Tabs, Redirect } from "expo-router";
 import { icons } from "../../constants";
 
-const TabIcon = ({ icon, name, color, focused }) => {
+const TabIcon = ({ icon, name, color, focused }: any) => {
   return (
-    <View className="flex items-center justify-center gap-0">
+    <View className="flex items-center justify-center gap-1">
       <Image
         source={icon}
-        resizeMode="cover"
+        resizeMode="contain"
         tintColor={color}
-        style={{ width: 20, height: 20 }}
+        style={{ width: 16, height: 16 }}
       />
       <Text
         className={`${focused ? "font-psemibold" : "font-pregular"} text-xs`}
+        style={{ color: color }}
       >
         {name}
       </Text>
@@ -24,7 +25,19 @@ const TabIcon = ({ icon, name, color, focused }) => {
 const TabsLayout = () => {
   return (
     <>
-      <Tabs screenOptions={{ tabBarShowLabel: false }}>
+      <Tabs
+        screenOptions={{
+          tabBarShowLabel: false,
+          tabBarActiveTintColor: "#FFA001",
+          tabBarInactiveTintColor: "#CDCDE0",
+          tabBarStyle: {
+            borderTopWidth: 1,
+            borderTopColor: "#232533",
+            backgroundColor: "#161622",
+            height: 84,
+          },
+        }}
+      >
         <Tabs.Screen
           name="home"
           options={{
