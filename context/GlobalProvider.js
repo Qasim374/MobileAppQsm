@@ -10,9 +10,9 @@ const GlobalProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  getCurrentUser()
-    .then((res) => console.log("getCurrentUser response:", res))
-    .catch((err) => console.error("getCurrentUser error:", err));
+  // getCurrentUser()
+  //   .then((res) => console.log("getCurrentUser response:", res))
+  //   .catch((err) => console.error("getCurrentUser error:", err));
   useEffect(() => {
     getCurrentUser()
       .then((res) => {
