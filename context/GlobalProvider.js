@@ -32,7 +32,7 @@ const GlobalProvider = ({ children }) => {
         setLoading(false);
       });
   }, []);
-
+  console.log("from global", user);
   return (
     <GlobalContext.Provider
       value={{
